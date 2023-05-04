@@ -154,7 +154,7 @@ body {
         border-radius : 10px;
         padding : 10px;
         transition : all 0.3s ease-in-out;
-        
+        z-index : 1000;
         
     }
     
@@ -166,13 +166,21 @@ body {
         display : block;
     }
 
+    .container {
+        flex-direction: column;
+    }
 
     .sendIcon , .receiveIcon {
-        transform : scale(0.7);
+        transform : scale(0.75);
         margin : 0 10px;
     }
     
     .sendIcon:hover , .receiveIcon:hover {
         transform : scale(.8);
+    }
+
+    .sendBox , .receiveBox {
+        height : 40%;
+        width : 80%;
     }
 }
