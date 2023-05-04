@@ -1,0 +1,178 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+    padding : 0;
+    margin : 0;
+}
+
+body {
+    background-color : #ffff;
+}
+
+.nav-bar {
+    height : 8vh;
+    width : 100vw;
+    background-color : #698CD6;
+    display : flex;
+    justify-content: space-between;
+    padding : 5px;
+    align-items : center;
+    position : sticky;
+}
+
+.logo {
+    height : 40px;
+    width : 40px;
+    color : #ffff;
+    margin : 0 10px ; 
+}
+
+.nav-items {
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+    gap : 1rem;
+    margin : 0 20px;
+}
+
+.nav-links {
+    text-decoration: none;
+    list-style-type: none;
+    color : #ffff;
+    font-family : 'Dongle' , sans-serif;
+    font-size : 1.5rem;
+    margin : 0 10px;
+    transition : color 0.3s ease-in-out;
+}
+
+.nav-links:hover {
+    color : #654E92;
+}
+
+.menu , .close{
+    height : 30px;
+    width : 30px;
+    margin : 0 20px;
+    display : none;
+}
+
+.wrapperContainer {
+    height : 92vh;
+    width : 100vw;
+    
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height : 90%;
+    width : 80%;
+    box-shadow : 5px 5px 10px grey;
+    background-color : #F0F0F0;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    gap : 2rem;
+        
+}
+
+.sendBox , .receiveBox  {
+    height : 80%;
+    width : 40%;
+    background-color : #698CD6;
+    border-radius : 10px;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 2rem;
+}
+
+.sendIcon , .receiveIcon {
+    height : 45%;
+    aspect-ratio: 1/1;
+    padding : 30px;
+    background-color : #ffff;
+    border-radius : 50vh;
+    transition : all 0.3s ease-in-out;
+    cursor : pointer;
+}
+
+.sendIcon:hover , .receiveIcon:hover {
+    transform : scale(1.1);
+}
+
+.sendText , .receiveText {
+    color : #ffff;
+    font-family: 'Dongle' , sans-serif;
+}
+
+
+.upload {
+    height : 20vh;
+    width : 85vw;
+    background-color : #698CD6;
+    margin : 50px auto;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    gap : 2rem;
+    font-family : 'Dongle' , sans-serif;
+    color : #ffff;
+    border-radius : 10px;
+    box-shadow : 5px 5px 5px grey;
+    cursor : pointer;
+    transition : all 0.3s ease-in-out;
+}
+
+.upload:hover {
+    color : #654E92;
+}
+
+.uploadIcon {
+    height : 45px;
+    width : 45px;
+}
+
+@media (max-width : 700px) {
+
+    .menu , .close {
+        display : none;
+    }
+    
+    .nav-items {
+        transform : scaleY(0);
+        transform-origin: top;
+        flex-direction: column;
+        position : absolute ;
+        top : 100%;
+        left : 0%;
+        right : 0%;
+        background-color : #698CD6;
+        text-align : center;
+        margin : 10px;
+        border-radius : 10px;
+        padding : 10px;
+        transition : all 0.3s ease-in-out;
+        
+        
+    }
+    
+    .nav-items.active {
+        transform : scaleY(1);
+    }
+
+    .menu.active ,.close.active{
+        display : block;
+    }
+
+
+    .sendIcon , .receiveIcon {
+        transform : scale(0.7);
+        margin : 0 10px;
+    }
+    
+    .sendIcon:hover , .receiveIcon:hover {
+        transform : scale(.8);
+    }
+}
